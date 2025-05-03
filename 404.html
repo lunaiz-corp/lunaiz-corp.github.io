@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redirecting...</title>
+  </head>
+  <body>
+    <p>Redirecting...</p>
+
+    <script>
+      const URL_LIST = {
+        "happytalk-sdk-loader":
+          "https://kms0219kms.github.io/happytalk-sdk-loader",
+      };
+
+      (function (l, ul) {
+        const op = l.pathname.split("/")[1];
+
+        if (!ul[op]) l.assign("/");
+        else l.assign(l.href.replace(`${l.origin}/${op}}`, ul[op]));
+      })(window.location, URL_LIST);
+    </script>
+  </body>
+</html>
