@@ -19,7 +19,7 @@
         const op = l.pathname.split("/")[1];
 
         if (!ul[op]) l.assign("/");
-        else l.assign(l.href.replace(`${l.origin}/${op}}`, ul[op]));
+        else l.assign(l.href.replace(`${l.origin}/${op}`, ul[op]));
       })(window.location, URL_LIST);
     </script>
   </body>
